@@ -53,8 +53,10 @@ class Body extends State<MyList> {
     var response = await post(Uri.parse(apiUrl),
         body: {"idea_id": ProjectConstants.ideaId.toString()});
     if (response.statusCode == 200) {
-      final decoded = json.decode(response.body);
-      funcs = decoded[0]['idea_specifications']['specifications']['other'][0];
+      if (response.body != "[]") {
+        final decoded = json.decode(response.body);
+        funcs = decoded[0]['idea_specifications']['specifications']['other'];
+      }
     }
     //ir buscar as detailed solutions de cada ids
     for (var id in ids) {
@@ -88,7 +90,7 @@ class Body extends State<MyList> {
       }
     }
     if (functionalities.isEmpty) {
-      isNull = true;
+      functionalities.add("N");
       return false;
     } else {
       return true;
@@ -138,9 +140,9 @@ class Body extends State<MyList> {
         decoded = json.decode(response.body);
       }
       if (ProjectConstants.funcsToAdd != []) {
-        lista = decoded[0]['idea_specifications']['specifications']['other'][0];
+        lista = decoded[0]['idea_specifications']['specifications']['other'];
         ProjectConstants.funcsToAdd.add(lista);
-        decoded[0]['idea_specifications']['specifications']['other'][0] =
+        decoded[0]['idea_specifications']['specifications']['other'] =
             ProjectConstants.funcsToAdd.join(' / ');
         dynamic encoded = json.encode(decoded[0]['idea_specifications']);
         apiUrl = 'https://smartification.glitch.me/update_idea_spec';
@@ -303,7 +305,7 @@ class Body extends State<MyList> {
                             shrinkWrap: true,
                             itemCount: functionalities.length,
                             itemBuilder: (context, index) {
-                              if (!isNull) {
+                              if (functionalities[0] != "N") {
                                 String teste = functionalities[index];
                                 return Column(
                                     crossAxisAlignment:
@@ -347,15 +349,16 @@ class Body extends State<MyList> {
                                     ]);
                               } else {
                                 return SizedBox(
-                                  height: size.height * 0.3,
-                                  width: size.width * 0.8,
-                                  child: Text(
+                                    height: size.height * 0.1,
+                                    width: size.width * 0.85,
+                                    child: Text(
                                       "Sorry, we do not have any functionalities to suggest.",
+                                      textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.blueAccent,
-                                          fontWeight: FontWeight.bold)),
-                                );
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 30,
+                                          color: Colors.blue),
+                                    ));
                               }
                             })),
                     const SizedBox(height: 25),

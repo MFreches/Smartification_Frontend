@@ -119,9 +119,9 @@ class Body extends State<MyList> {
         decoded = json.decode(response.body);
       }
       if (ProjectConstants.funcsToAdd != []) {
-        lista = decoded[0]['idea_specifications']['specifications']['other'][0];
+        lista = decoded[0]['idea_specifications']['specifications']['other'];
         ProjectConstants.funcsToAdd.add(lista);
-        decoded[0]['idea_specifications']['specifications']['other'][0] =
+        decoded[0]['idea_specifications']['specifications']['other'] =
             ProjectConstants.funcsToAdd.join(' / ');
         dynamic encoded = json.encode(decoded[0]['idea_specifications']);
         apiUrl = 'https://smartification.glitch.me/update_idea_spec';

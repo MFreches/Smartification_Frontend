@@ -11,6 +11,7 @@ class _SecondQuestion extends State<SecondQuestion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         automaticallyImplyLeading: false,
         title: Text(
           "Smartification Service - Describe Idea",

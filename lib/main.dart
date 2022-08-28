@@ -140,10 +140,9 @@ class MyApp extends StatelessWidget {
               },
             );
           } else {
-            return Background(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
+            return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
                   Text(
                     "Loading Application.\nThis might take a few seconds.",
                     textAlign: TextAlign.center,
@@ -151,7 +150,7 @@ class MyApp extends StatelessWidget {
                   ),
                   const SizedBox(height: 30),
                   CircularProgressIndicator(color: Colors.blueGrey)
-                ]));
+                ]);
           }
         });
   }

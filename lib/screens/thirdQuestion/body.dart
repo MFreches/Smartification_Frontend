@@ -52,9 +52,9 @@ class Body extends StatelessWidget {
         decoded = json.decode(response.body);
       }
       if (ProjectConstants.funcsToAdd != []) {
-        lista = decoded[0]['idea_specifications']['specifications']['other'][0];
+        lista = decoded[0]['idea_specifications']['specifications']['other'];
         ProjectConstants.funcsToAdd.add(lista);
-        decoded[0]['idea_specifications']['specifications']['other'][0] =
+        decoded[0]['idea_specifications']['specifications']['other'] =
             ProjectConstants.funcsToAdd.join(' / ');
         dynamic encoded = json.encode(decoded[0]['idea_specifications']);
         apiUrl = 'https://smartification.glitch.me/update_idea_spec';
@@ -91,7 +91,6 @@ class Body extends StatelessWidget {
     });
     //tags to increment
     for (var increment in ProjectConstants.tagsToIncrement) {
-      int? idToIncrement = ProjectConstants.mapTags[increment];
       apiUrl = 'https://smartification.glitch.me/update_tagging_ocurrence_2';
       response = await post(Uri.parse(apiUrl), body: {
         "tag": increment.toString(),

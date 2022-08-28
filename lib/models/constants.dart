@@ -1,11 +1,11 @@
 class ProjectConstants {
-  static int userId = 22;
-  static int projectId = 11;
-  static int furniture_id = 1;
+  static int userId = 19;
+  static int projectId = 19;
+  static int furniture_id = 18;
   static int ideaId = -1;
   String projectTags = '';
   static String userName = '';
-  static int projectIdSelected = 12;
+  static int projectIdSelected = -1;
   static String projectNameSelected = '';
   static String furnitureDimensions = '';
   static String projectName = '';

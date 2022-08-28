@@ -11,9 +11,10 @@ class _ThirdQuestion extends State<ThirdQuestion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: false,
         title: Text(
           "Smartification Service - Smartification Use Context",
-          textAlign: TextAlign.center,
           style: TextStyle(color: Colors.white),
         ),
       ),

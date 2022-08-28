@@ -61,7 +61,7 @@ class Body extends State<MyList> {
         body: {"idea_id": ProjectConstants.ideaId.toString()});
     if (response.statusCode == 200) {
       final decoded = json.decode(response.body);
-      funcs = decoded[0]['idea_specifications']['specifications']['other'][0];
+      funcs = decoded[0]['idea_specifications']['specifications']['other'];
     }
     apiUrl = 'https://smartification.glitch.me/select_detailed_solution_spec';
     response =
@@ -138,9 +138,9 @@ class Body extends State<MyList> {
         decoded = json.decode(response.body);
       }
       if (ProjectConstants.funcsToAdd != []) {
-        lista = decoded[0]['idea_specifications']['specifications']['other'][0];
+        lista = decoded[0]['idea_specifications']['specifications']['other'];
         ProjectConstants.funcsToAdd.add(lista);
-        decoded[0]['idea_specifications']['specifications']['other'][0] =
+        decoded[0]['idea_specifications']['specifications']['other'] =
             ProjectConstants.funcsToAdd.join(' / ');
         dynamic encoded = json.encode(decoded[0]['idea_specifications']);
         apiUrl = 'https://smartification.glitch.me/update_idea_spec';
