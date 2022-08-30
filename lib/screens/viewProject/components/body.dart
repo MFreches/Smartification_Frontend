@@ -374,10 +374,10 @@ class Body extends State<MyList> {
                           ),
                           onPressed: () {
                             addToProject();
-                            Navigator.pushNamed(context, '/homePage');
+                            Navigator.pop(context);
                           },
                           child: Text(
-                            "Back to home page",
+                            "Back to Projects Catalog",
                             style: TextStyle(fontSize: 30),
                             textAlign: TextAlign.center,
                           ),

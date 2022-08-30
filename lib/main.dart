@@ -24,7 +24,6 @@ import 'package:smartification/screens/suggestedFunctionalities/suggested_functi
 import 'package:smartification/screens/thirdQuestion/third_question.dart';
 import 'package:smartification/screens/thirdQuestion2/third_question2.dart';
 import 'package:smartification/screens/viewProject/view_project.dart';
-import 'package:smartification/screens/welcome/components/background.dart';
 import 'package:smartification/screens/welcome/welcome_screen.dart';
 
 void main() {
