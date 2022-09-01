@@ -315,7 +315,9 @@ class Body extends StatelessWidget {
                           ),
                           onPressed: () {
                             updateState();
-                            Navigator.pushNamed(context, '/infoPage');
+                            html.window.open(
+                                "https://forms.gle/SayQJ8wWVo3WaFx26",
+                                "_blank");
                           },
                           child: Text(
                             "Approve Final Solution",

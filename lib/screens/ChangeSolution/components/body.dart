@@ -315,6 +315,23 @@ class Body extends StatelessWidget {
                           ),
                         )),
                     const SizedBox(height: 25),
+                    SizedBox(
+                        width: size.width * 0.45,
+                        height: size.height * 0.09,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.blueGrey,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            "Back to the previous page",
+                            style: TextStyle(fontSize: 30),
+                            textAlign: TextAlign.center,
+                          ),
+                        )),
+                    const SizedBox(height: 25),
                   ],
                 ),
               ),
