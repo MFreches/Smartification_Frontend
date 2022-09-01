@@ -260,13 +260,14 @@ class Body extends State<MyList> {
                       width: size.width * 0.75,
                       height: size.height * 0.3,
                       child: TextField(
+                        style: TextStyle(fontSize: 27),
                         readOnly: true,
                         maxLines: 10,
                         controller: problemDescription,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: '$problemDescriptionText',
-                            hintStyle: TextStyle(fontSize: 23)),
+                            hintStyle: TextStyle(fontSize: 27)),
                       ),
                     ),
                     const SizedBox(height: 10),

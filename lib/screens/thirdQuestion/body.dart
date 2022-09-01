@@ -197,12 +197,13 @@ class Body extends StatelessWidget {
                       width: size.width * 0.75,
                       height: size.height * 0.3,
                       child: TextField(
+                        style: TextStyle(fontSize: 27),
                         maxLines: 10,
                         controller: smartificationPieceContext,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: 'Answer Here',
-                            hintStyle: TextStyle(fontSize: 23)),
+                            hintStyle: TextStyle(fontSize: 27)),
                       ),
                     ),
                     const SizedBox(height: 10),

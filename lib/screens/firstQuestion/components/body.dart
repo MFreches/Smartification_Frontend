@@ -73,9 +73,11 @@ class Body extends StatelessWidget {
               width: size.width * 0.75,
               height: size.height * 0.3,
               child: TextField(
+                style: TextStyle(fontSize: 27),
                 maxLines: 10,
                 controller: problemDescription,
                 decoration: InputDecoration(
+                  hintStyle: TextStyle(fontSize: 27),
                   border: OutlineInputBorder(),
                   hintText: 'Answer Here',
                 ),

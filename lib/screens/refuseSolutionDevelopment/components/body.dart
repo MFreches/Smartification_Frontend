@@ -342,16 +342,19 @@ class Body extends StatelessWidget {
                       width: size.width * 0.6,
                       height: size.height * 0.3,
                       child: TextField(
+                        style: TextStyle(fontSize: 27),
                         readOnly: false,
                         maxLines: 10,
                         controller: controllerChangeSolution,
                         decoration: InputDecoration(
+                          hintStyle: TextStyle(fontSize: 27),
                           border: OutlineInputBorder(),
                           hintText:
                               'Write what you want to change in the proposed solution',
                         ),
                       ),
                     ),
+                    const SizedBox(height: 20),
                     SizedBox(
                       width: size.width * 0.45,
                       height: size.height * 0.09,
@@ -371,7 +374,25 @@ class Body extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 25),
+                    SizedBox(
+                      width: size.width * 0.45,
+                      height: size.height * 0.09,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.blueGrey,
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          "Back to the previous page",
+                          style: TextStyle(fontSize: 30),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 25),
                   ],
                 ),
               ),

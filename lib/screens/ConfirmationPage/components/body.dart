@@ -150,7 +150,9 @@ class Body extends StatelessWidget {
                                 height: size.height * 0.08,
                                 width: size.width * 0.6,
                                 child: TextField(
+                                  style: TextStyle(fontSize: 27),
                                   decoration: InputDecoration(
+                                    
                                     prefixIcon: Icon(
                                       Icons.edit,
                                       color: Colors.black,
@@ -158,7 +160,7 @@ class Body extends StatelessWidget {
                                     ),
                                     hintText: "$projectName",
                                     hintStyle: TextStyle(
-                                      fontSize: 25,
+                                      fontSize: 27,
                                       color: Colors.black,
                                     ),
                                   ),

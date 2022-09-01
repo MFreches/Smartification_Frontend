@@ -287,16 +287,19 @@ class Body extends StatelessWidget {
                       width: size.width * 0.6,
                       height: size.height * 0.3,
                       child: TextField(
+                        style: TextStyle(fontSize: 27),
                         readOnly: false,
                         maxLines: 10,
                         controller: controllerChangeSolution,
                         decoration: InputDecoration(
+                          hintStyle: TextStyle(fontSize: 27),
                           border: OutlineInputBorder(),
                           hintText:
                               'Write what you want to change in the proposed idea',
                         ),
                       ),
                     ),
+                    const SizedBox(height: 25),
                     SizedBox(
                         width: size.width * 0.45,
                         height: size.height * 0.09,
