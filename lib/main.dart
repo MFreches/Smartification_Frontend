@@ -45,40 +45,40 @@ class MyApp extends StatelessWidget {
           route = '/';
           break;
         case 1:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 2:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 3:
           route = '/proposedSolution';
           break;
         case 4:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 5:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 6:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 7:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 8:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 9:
           route = '/solutionInDevelopment';
           break;
         case 10:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 11:
           route = '/finalApprove';
           break;
         case 12:
-          route = '/noUpdates';
+          route = '/infoPage';
           break;
         case 13:
           route = '/afterSales';
