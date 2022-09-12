@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
     return true;
   }
 
-  // This widget is the root of your application.
+  // test This widget is the root of your application.
   late final Future? myFuture = checkProjectState();
   @override
   Widget build(BuildContext context) {
