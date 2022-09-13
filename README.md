@@ -4,13 +4,15 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this application it is necessary an IDE, I recommend Visual Studio Code because of the support for dart and flutter. The installation process is using Visual Studio Code, some things might change for other IDE.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Installation:
+  - Install Flutter SDK (For this follow this process: https://docs.flutter.dev/get-started/install/windows ).
+  - Import project to VSC.
+  - Go to Packages:
+    - Search for "Dart" and install.
+    - Search for "Flutter" and install.
+    
+Run:
+ - In VSC select Chrome as the device to run the application.
+ - Go to main.dart and click "Run without debugging"
