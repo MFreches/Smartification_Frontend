@@ -1,6 +1,6 @@
-# smartification
+# Smartification
 
-A new Flutter project.
+Smartification Frontend. This is a GUI that needs the Smartification_Backend project to run properly. This project can also be found in my GitHub.
 
 ## Getting Started
 
